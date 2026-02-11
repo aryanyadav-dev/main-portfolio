@@ -339,7 +339,7 @@ export default function Home() {
             {/* Profile Image - Easter Egg Trigger */}
             <button
               onClick={() => setShowEasterEgg(!showEasterEgg)}
-              className="group relative -translate-y-4 mb-0 h-72 w-72 grayscale filter sm:h-80 sm:w-80 overflow-visible cursor-pointer transition-all duration-500 hover:grayscale-0 active:scale-95"
+              className="group relative -translate-y-4 mb-0 h-72 w-72 sm:h-80 sm:w-80 overflow-visible cursor-pointer transition-all duration-500 active:scale-95"
               aria-label="Toggle Aura Mode"
             >
               <div className="relative h-full w-full overflow-hidden [mask-image:linear-gradient(to_bottom,black_80%,transparent)]">
@@ -348,7 +348,7 @@ export default function Home() {
                   alt="Profile"
                   fill
                   unoptimized
-                  className={`object-cover transition-all duration-700 ${showEasterEgg ? 'grayscale-0 scale-105' : 'grayscale'}`}
+                  className={`object-cover transition-all duration-700 ${showEasterEgg ? 'scale-105' : ''}`}
                   priority
                 />
               </div>
