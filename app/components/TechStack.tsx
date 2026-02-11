@@ -4,7 +4,10 @@ import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const categories = [
+type Skill = { name: string; slug: string; src?: string; color?: string };
+type Category = { name: string; skills: Skill[] };
+
+const categories: Category[] = [
     {
         name: "Languages",
         skills: [

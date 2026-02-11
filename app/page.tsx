@@ -339,23 +339,22 @@ export default function Home() {
             {/* Profile Image - Easter Egg Trigger */}
             <button
               onClick={() => setShowEasterEgg(!showEasterEgg)}
-              className="group relative mb-0 h-72 w-72 grayscale filter sm:h-80 sm:w-80 overflow-visible cursor-pointer transition-all duration-500 hover:grayscale-0 active:scale-95"
+              className="group relative -translate-y-4 mb-0 h-72 w-72 grayscale filter sm:h-80 sm:w-80 overflow-visible cursor-pointer transition-all duration-500 hover:grayscale-0 active:scale-95"
               aria-label="Toggle Aura Mode"
             >
-              <div className="relative h-full w-full overflow-hidden">
+              <div className="relative h-full w-full overflow-hidden [mask-image:linear-gradient(to_bottom,black_80%,transparent)]">
                 <Image
-                  src="/me.png" // User's photo
+                  src="/me.png"
                   alt="Profile"
                   fill
                   unoptimized
                   className={`object-cover transition-all duration-700 ${showEasterEgg ? 'grayscale-0 scale-105' : 'grayscale'}`}
                   priority
                 />
-                <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white via-white/60 to-transparent dark:from-black dark:via-black/60 backdrop-blur-[1px]" />
               </div>
 
               {/* Subtle Glow on Hover */}
-              <div className="absolute -inset-4 translate-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[inset_0_0_28px_rgba(59,130,246,0.3)] rounded-full pointer-events-none" />
+              <div className="absolute inset-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[inset_0_0_20px_rgba(59,130,246,0.3)] rounded-full pointer-events-none" />
             </button>
 
             {/* Hero Text */}
