@@ -1,0 +1,163 @@
+# Aditya Patil
+/əˈdɪtjə pɑːˈtiːl/ • noun • 00:00:00 IST
+
+## About
+
+A full-stack developer and [product builder](https://en.wikipedia.org/wiki/Product_design) with deep experience across engineering, product strategy, and user-centric design.
+
+A [polymath](https://en.wikipedia.org/wiki/Polymath) who bridges technical architecture with business outcomes to create impactful, scalable solutions.
+
+## Experience
+
+### Open To
+**Remote / Hybrid**
+
+Open to product and AI roles with ownership.
+
+Looking for teams where I can shape roadmap, ship fast, and own outcomes from discovery to launch.
+
+Roles: Product Manager, Associate PM, AI Engineer, AI Product Engineer, Founding PM
+
+## Projects
+
+### FrameFlow - Post Production Workflow Platform
+**Post Production Platform**
+[https://github.com/aryanyadav-dev/post-prod-workflow-manager](https://github.com/aryanyadav-dev/post-prod-workflow-manager)
+
+Post-production in filmmaking, video production, and content creation involves multiple stages-editing, color correction, sound design, VFX, and final delivery. FrameFlow streamlines these workflows, offering task management, collaboration tools, file tracking, and cloud integration.
+
+### Homewise Vision
+**AR / Vision**
+[https://homewisevision.vercel.app/](https://homewisevision.vercel.app/)
+
+An AR companion for home builders that overlays 3D models on blueprints, simulates finishes in real time, and generates location-based cost estimates. Users can place furniture, compare materials, and export room plans for contractors, clients, and procurement.
+
+### Aeroverse XR
+**XR Platform**
+[https://aeroverse-xr.vercel.app/](https://aeroverse-xr.vercel.app/)
+
+A web-based XR platform that blends AR visuals, interactive 3D models, and collaborative classrooms to bridge aerospace theory with hands-on exploration. Supports guided lessons, live annotations, shared simulations, and exportable lesson modules for educators.
+
+### VAULT OS
+**Security OS**
+[https://vault-lime.vercel.app/](https://vault-lime.vercel.app/)
+
+Enterprise-grade system for secure data purging, advanced content analysis, and system diagnostics across sensitive environments. Combines policy-driven destruction, tamper-proof audit trails, and intelligent analytics to detect anomalies before they become incidents.
+
+### Ideator AI
+**Founder Tools**
+[https://github.com/aryanyadav-dev/Ideator-AI](https://github.com/aryanyadav-dev/Ideator-AI)
+
+AI assistant for entrepreneurs that generates startup ideas, scores viability, and builds go-to-market plans using market signals and competitive benchmarks. Produces concise briefs, positioning drafts, and validation checklists with next-step recommendations.
+
+### ShipGuard: Deploy Check CLI
+**Developer Tools**
+[https://www.npmjs.com/package/deploy-check-cli](https://www.npmjs.com/package/deploy-check-cli)
+
+CLI tool that detects deployment risks like breaking APIs, destructive migrations, and coverage gaps. Ships with Jira/Confluence reporting, policy gates, and CI-friendly outputs for release managers and platform teams.
+
+### Browser Render Debugger CLI
+**Performance**
+[https://www.npmjs.com/package/render-debugger](https://www.npmjs.com/package/render-debugger)
+
+CLI-first performance profiler for Chromium-based browsers that detects rendering bottlenecks, layout shifts, and paint regressions. Integrates cleanly with CI/CD for continuous rendering performance checks and alerts.
+
+### SOMA
+**Motion Capture Platform**
+[https://github.com/aryanyadav-dev/soma-mocap-apk](https://github.com/aryanyadav-dev/soma-mocap-apk)
+
+Enterprise-grade React Native application for real-time motion capture with 17 IMU sensors, AI-based pose processing, and proximity-based streaming. The system fuses sensor feeds into stable full-body pose data, streams sessions to nearby clients with low jitter, and supports live monitoring for training workflows. Achieves 120Hz throughput with <50ms glass-to-glass latency while maintaining reliable performance on production mobile hardware.
+
+## In Between These Experiences
+
+### The Product Building Journey
+
+I've always approached building from a product lens first: what is the unique proposition, which pain is urgent enough to solve, and can this grow from a feature into a real business. That mindset made me obsess less over just shipping code and more over building something with clear market pull.
+
+Hackathons played a huge role in shaping how I build products under pressure. Building **AeroVerse XR** was especially demanding because it required integrating AI workflows with an AR/VR stack on the Unity game engine while keeping the product usable and performant. Through programs like Smart India Hackathon, I also iterated aggressively on ideas such as **VAULT OS**, which strengthened my ability to validate a proposition quickly, prioritize what matters, and convert complex concepts into practical product decisions.
+
+That phase also taught me a hard lesson: technical depth alone doesn't create a product. A product needs positioning, distribution, repeat usage, and a strong reason to exist in a crowded market.
+
+During this journey, I came across **Y Combinator Startup School** and started exploring startup culture more seriously. Its clarity around user-first iteration, tight feedback loops, and ruthless focus on solving one painful problem influenced how I evaluate and prioritize ideas.
+
+From there, I began structuring my builds with product discipline: defining core hypotheses, validating with real users, measuring what moves retention, and iterating weekly with clear goals. That shift changed how I work, from building interesting things to building outcomes.
+
+Towards the end of **2025**, I transitioned into building internal developer tooling, especially CLI-first workflows. Tools like **ShipGuard** and **Browser Render Debugger** came out of real operational pain and were designed for immediate utility inside engineering teams.
+
+**Today, my product journey is a balance of startup curiosity and execution rigor: find a sharp problem, craft a unique wedge, and scale it into something that users rely on.**
+
+## Education
+
+### Thakur College of Engineering and Technology
+**Computer Engineering**
+2023 - Surviving
+
+## Research Publications
+
+### Cross-Compatible Encryption Adapter for Securing Legacy Modbus Devices
+**2025 17th International Conference on COMmunication Systems and NETworks (COMSNETS)**
+Authors: Aditya Patil; T. S. Sreeram
+[https://doi.org/10.1109/COMSNETS63942.2025.10885597](https://doi.org/10.1109/COMSNETS63942.2025.10885597)
+
+**Abstract:**
+Supervisory Control and Data Acquisition systems are the backbone of managing critical infrastructure in modern industrial control systems, spanning sectors from power generation to logistics. However, these systems face significant challenges due to threats from malicious actors. The Modbus protocol, despite its known lack of security features, is still used in many industries managing critical infrastructure due to the high cost of replacing existing systems. As a result, these legacy systems remain vulnerable to potentially damaging threats. This paper proposes an adapter device for enhancing the security of the Modbus protocol without replacing devices in legacy systems. The proposed adapter is cost-efficient, provides cross-platform support, and is easy to install, update, and maintain.
+
+## Tech Stack
+
+I'm a generalist at heart who can build with anything, but here's the core stack I've spent the most time with:
+
+Languages: Python, JavaScript, TypeScript
+
+Frontend: HTML5, CSS3, React.js, Next.js, Tailwind CSS, Shadcn UI, Framer Motion
+
+Backend & DB: Node.js, Nest JS, MySQL, MongoDB Atlas, Redis, FireBase
+
+Infra & Tools: Git, GitHub, Postman, AWS, Linux
+
+AI & ML: Hugging Face, PyTorch, Pandas, OpenCV, scikit-learn, TensorFlow
+
+## Recommendations by Clients
+
+Check out my [resume](https://drive.google.com/file/d/1f6TS98bvT_eIGNXipWzXyNI_vtRl38j5/view) for my full work history, skills, and accomplishments.
+
+## Explainer Videos
+
+I kinda built a Claude Code for Jira and Confluence here's a video about it...
+
+Featured Video: [https://youtu.be/xhio4FN8gds](https://youtu.be/xhio4FN8gds)
+
+## Writings & Blogs
+
+I host my thoughts on [Medium](https://medium.com/@aryanyadavblogs) rather than building a custom site. Instead of overengineering, I sidestep reinventing the wheel to channel my energy into blending sharp takes on AI systems, product strategy, and technical architecture with bold dives into filmmaking craft, music composition, and production.
+
+## Library
+
+### Casual Reads
+- **Hooked: How to Build Habit-Forming Products** by Nir Eyal
+- **The Lean Startup** by Eric Ries
+- **Zero to One** by Peter Thiel
+- **The Almanack of Naval Ravikant** by Eric Jorgenson
+- **Deep Work** by Cal Newport
+- **Limitless** by Jim Kwik
+
+*and many more, these are just one of my best reads
+
+## Thing About Me
+
+Driven by curiosity, I chase a deep understanding of how things truly work at their core, whether diving into the intricacies of complex architectures or stepping out into the real world. Beyond engineering and build systems, I find that balance in the tactile and thoughtful.
+
+The best products emerge from creators with diverse interests. It's this potent mix of technical depth and human insight that crafts technology which truly connects and resonates.
+
+## Get in Touch
+
+Connect with me on [LinkedIn](https://www.linkedin.com/in/aditya-patil-260a631b2/) or shoot an [email](mailto:adityapatil24680@gmail.com)
+
+---
+
+**Links:**
+- GitHub: [https://github.com/PythonHacker24](https://github.com/PythonHacker24)
+- LinkedIn: [https://www.linkedin.com/in/aditya-patil-260a631b2/](https://www.linkedin.com/in/aditya-patil-260a631b2/)
+- Twitter: [https://x.com/firecaffeine](https://x.com/firecaffeine)
+- YouTube: [https://youtube.com/@theracecondition](https://youtube.com/@theracecondition)
+- Discord: [https://discord.gg/ry4YCJaShK](https://discord.gg/ry4YCJaShK)
+- Calendar: [https://cal.com/adi-patil/30min](https://cal.com/adi-patil/30min)
