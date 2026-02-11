@@ -933,7 +933,7 @@ export default function Home() {
               </button>
               <div className="rounded-lg bg-white p-2">
                 <QRCodeSVG
-                  value="https://www.justaditya.com/"
+                  value="https://aryanyadav-dev.vercel.app/"
                   size={200}
                   level="H"
                   includeMargin={false}
