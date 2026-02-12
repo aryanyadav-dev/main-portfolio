@@ -488,7 +488,7 @@ export default function Home() {
               </ScrollReveal>
               <div className="space-y-12">
                 {projects.map((project, index) => (
-                  <ScrollReveal key={project.title} delay={index * 0.1}>
+                  <ScrollReveal key={project.title} delay={index * 0.05}>
                     <ExperienceItem
                       key={project.title}
                       title={project.title}
