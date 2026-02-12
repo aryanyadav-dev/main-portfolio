@@ -335,25 +335,25 @@ export default function Home() {
           /* Human Mode - Original View */
           <motion.main
             key="human"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.35, ease: "easeOut" }}
             className="flex w-full max-w-2xl flex-col items-center text-center"
           >
             {/* Profile Image - Easter Egg Trigger */}
             <button
               onClick={() => setShowEasterEgg(!showEasterEgg)}
-              className="group relative -translate-y-4 mb-0 h-72 w-72 sm:h-80 sm:w-80 overflow-visible cursor-pointer transition-all duration-500 active:scale-95"
+              className="group relative -translate-y-4 mb-0 h-72 w-72 sm:h-80 sm:w-80 overflow-visible cursor-pointer transition-transform duration-500 active:scale-95"
               aria-label="Toggle Aura Mode"
             >
-              <div className="relative h-full w-full overflow-hidden [mask-image:linear-gradient(to_bottom,black_80%,transparent)]">
+              <div className="relative h-full w-full overflow-hidden [mask-image:linear-gradient(to_bottom,black_90%,transparent)]">
                 <Image
                   src="/me.png"
                   alt="Profile"
                   fill
                   unoptimized
-                  className={`object-cover transition-all duration-700 ${showEasterEgg ? 'scale-105' : ''}`}
+                  className={`object-cover transition-transform duration-700 ${showEasterEgg ? 'scale-105' : ''}`}
                   priority
                 />
               </div>
