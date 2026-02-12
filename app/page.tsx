@@ -14,6 +14,7 @@ import { ThemeToggle } from "./components/ThemeToggle";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { PomodoroTimer } from "./components/PomodoroTimer";
+import { ScrollReveal } from "./components/ScrollReveal";
 
 import { getMarkdownContent } from "./data/content";
 
@@ -419,7 +420,7 @@ export default function Home() {
             </div>
 
             {/* Experience Section */}
-            <div className="mt-12 mb-16 w-full text-left">
+            <ScrollReveal className="mt-12 mb-16 w-full text-left">
               <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
                 Experience
               </h2>
@@ -476,124 +477,128 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Projects Section */}
             <div className="mb-16 w-full text-left">
-              <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
-                Projects
-              </h2>
+              <ScrollReveal>
+                <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
+                  Projects
+                </h2>
+              </ScrollReveal>
               <div className="space-y-12">
-                {projects.map((project) => (
-                  <ExperienceItem
-                    key={project.title}
-                    title={project.title}
-                    role={project.role ?? project.tag ?? ""}
-                    collapsible={true}
-                    collapsedHeight="max-h-24"
-                    titleClassName="text-lg"
-                  >
-                    <div className="space-y-4">
-                      <p>{project.description}</p>
+                {projects.map((project, index) => (
+                  <ScrollReveal key={project.title} delay={index * 0.1}>
+                    <ExperienceItem
+                      key={project.title}
+                      title={project.title}
+                      role={project.role ?? project.tag ?? ""}
+                      collapsible={true}
+                      collapsedHeight="max-h-24"
+                      titleClassName="text-lg"
+                    >
+                      <div className="space-y-4">
+                        <p>{project.description}</p>
 
-                      <div className="flex w-full max-w-[350px] items-center justify-between gap-3 rounded-2xl border border-gray-100 bg-white px-4 py-3 shadow-sm transition-all duration-300 hover:border-gray-200 dark:border-zinc-900 dark:bg-zinc-950/70 dark:hover:border-zinc-800 group-data-[collapsed=true]:hidden">
-                        <div className="min-w-0">
-                          <div className="truncate text-sm font-semibold text-black dark:text-white">
-                            {project.title}
-                          </div>
-                          <div className="mt-1 flex items-center gap-2 text-[11px] text-gray-400 dark:text-gray-500">
-                            <span className="truncate">{project.role.replace(" · Ongoing", "")}</span>
-                            {project.ongoing ? (
-                              <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-emerald-600 dark:text-emerald-400">
-                                <span className="relative flex h-1 w-1">
-                                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
-                                  <span className="relative inline-flex h-1 w-1 rounded-full bg-emerald-500" />
+                        <div className="flex w-full max-w-[350px] items-center justify-between gap-3 rounded-2xl border border-gray-100 bg-white px-4 py-3 shadow-sm transition-all duration-300 hover:border-gray-200 dark:border-zinc-900 dark:bg-zinc-950/70 dark:hover:border-zinc-800 group-data-[collapsed=true]:hidden">
+                          <div className="min-w-0">
+                            <div className="truncate text-sm font-semibold text-black dark:text-white">
+                              {project.title}
+                            </div>
+                            <div className="mt-1 flex items-center gap-2 text-[11px] text-gray-400 dark:text-gray-500">
+                              <span className="truncate">{project.role.replace(" · Ongoing", "")}</span>
+                              {project.ongoing ? (
+                                <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-emerald-600 dark:text-emerald-400">
+                                  <span className="relative flex h-1 w-1">
+                                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
+                                    <span className="relative inline-flex h-1 w-1 rounded-full bg-emerald-500" />
+                                  </span>
+                                  Ongoing
                                 </span>
-                                Ongoing
-                              </span>
-                            ) : null}
+                              ) : null}
+                            </div>
                           </div>
+                          {project.link ? (
+                            <a
+                              href={project.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex shrink-0 items-center gap-1 rounded-full border border-gray-200 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-700 transition-colors hover:text-black dark:border-zinc-800 dark:text-gray-300 dark:hover:text-white"
+                              aria-label={`View ${project.title}`}
+                            >
+                              View
+                              <ArrowUpRight size={10} />
+                            </a>
+                          ) : (
+                            <button
+                              type="button"
+                              className="inline-flex shrink-0 items-center gap-1 rounded-full border border-gray-200 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-500 transition-colors hover:text-black dark:border-zinc-800 dark:text-gray-500 dark:hover:text-white"
+                              aria-label={`View ${project.title}`}
+                            >
+                              View
+                              <ArrowUpRight size={10} />
+                            </button>
+                          )}
                         </div>
-                        {project.link ? (
-                          <a
-                            href={project.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex shrink-0 items-center gap-1 rounded-full border border-gray-200 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-700 transition-colors hover:text-black dark:border-zinc-800 dark:text-gray-300 dark:hover:text-white"
-                            aria-label={`View ${project.title}`}
-                          >
-                            View
-                            <ArrowUpRight size={10} />
-                          </a>
-                        ) : (
-                          <button
-                            type="button"
-                            className="inline-flex shrink-0 items-center gap-1 rounded-full border border-gray-200 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-500 transition-colors hover:text-black dark:border-zinc-800 dark:text-gray-500 dark:hover:text-white"
-                            aria-label={`View ${project.title}`}
-                          >
-                            View
-                            <ArrowUpRight size={10} />
-                          </button>
-                        )}
-                      </div>
 
-                      {project.contributorProfiles?.length ? (
-                        <div className="group-data-[collapsed=true]:hidden">
-                          <div className="text-[9px] font-semibold uppercase tracking-[0.2em] text-gray-400 dark:text-gray-500">
-                            Other contributors
+                        {project.contributorProfiles?.length ? (
+                          <div className="group-data-[collapsed=true]:hidden">
+                            <div className="text-[9px] font-semibold uppercase tracking-[0.2em] text-gray-400 dark:text-gray-500">
+                              Other contributors
+                            </div>
+                            <div className="mt-2 flex -space-x-2.5">
+                              {project.contributorProfiles.map((contributor) => (
+                                <a
+                                  key={`${project.title}-contrib-${contributor.name}`}
+                                  href={contributor.linkedin}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  aria-label={contributor.name}
+                                  className="relative block h-10 w-10 overflow-hidden rounded-full border-2 border-white shadow-sm dark:border-black"
+                                >
+                                  <Image
+                                    src={contributor.image}
+                                    alt={contributor.name}
+                                    fill
+                                    sizes="40px"
+                                    className="object-cover"
+                                  />
+                                </a>
+                              ))}
+                            </div>
                           </div>
-                          <div className="mt-2 flex -space-x-2.5">
-                            {project.contributorProfiles.map((contributor) => (
-                              <a
-                                key={`${project.title}-contrib-${contributor.name}`}
-                                href={contributor.linkedin}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label={contributor.name}
-                                className="relative block h-10 w-10 overflow-hidden rounded-full border-2 border-white shadow-sm dark:border-black"
-                              >
-                                <Image
-                                  src={contributor.image}
-                                  alt={contributor.name}
-                                  fill
-                                  sizes="40px"
-                                  className="object-cover"
-                                />
-                              </a>
-                            ))}
+                        ) : project.contributors?.length ? (
+                          <div className="group-data-[collapsed=true]:hidden">
+                            <div className="text-[9px] font-semibold uppercase tracking-[0.2em] text-gray-400 dark:text-gray-500">
+                              Other contributors
+                            </div>
+                            <div className="mt-2 flex -space-x-2.5">
+                              {project.contributors.map((initials, index) => (
+                                <div
+                                  key={`${project.title}-contrib-${initials}-${index}`}
+                                  className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-white bg-gray-100 text-xs font-semibold text-gray-600 shadow-sm dark:border-black dark:bg-zinc-900 dark:text-gray-300"
+                                >
+                                  {initials}
+                                </div>
+                              ))}
+                              {project.moreContributors ? (
+                                <div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-white bg-gray-200 text-xs font-semibold text-gray-600 shadow-sm dark:border-black dark:bg-zinc-800 dark:text-gray-300">
+                                  +{project.moreContributors}
+                                </div>
+                              ) : null}
+                            </div>
                           </div>
-                        </div>
-                      ) : project.contributors?.length ? (
-                        <div className="group-data-[collapsed=true]:hidden">
-                          <div className="text-[9px] font-semibold uppercase tracking-[0.2em] text-gray-400 dark:text-gray-500">
-                            Other contributors
-                          </div>
-                          <div className="mt-2 flex -space-x-2.5">
-                            {project.contributors.map((initials, index) => (
-                              <div
-                                key={`${project.title}-contrib-${initials}-${index}`}
-                                className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-white bg-gray-100 text-xs font-semibold text-gray-600 shadow-sm dark:border-black dark:bg-zinc-900 dark:text-gray-300"
-                              >
-                                {initials}
-                              </div>
-                            ))}
-                            {project.moreContributors ? (
-                              <div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-white bg-gray-200 text-xs font-semibold text-gray-600 shadow-sm dark:border-black dark:bg-zinc-800 dark:text-gray-300">
-                                +{project.moreContributors}
-                              </div>
-                            ) : null}
-                          </div>
-                        </div>
-                      ) : null}
-                    </div>
-                  </ExperienceItem>
+                        ) : null}
+                      </div>
+                    </ExperienceItem>
+                  </ScrollReveal>
                 ))}
               </div>
             </div>
 
 
             {/* In Between These Experiences Section */}
-            <div className="mb-16 w-full text-left">
+            <ScrollReveal className="mb-16 w-full text-left">
               <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
                 In Between These Experiences
               </h2>
@@ -620,11 +625,11 @@ export default function Home() {
                   </div>
                 </ExperienceItem>
               </div>
-            </div>
+            </ScrollReveal>
 
 
             {/* Education Section */}
-            <div className="mb-16 w-full text-left">
+            <ScrollReveal className="mb-16 w-full text-left">
               <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
                 Education
               </h2>
@@ -636,18 +641,18 @@ export default function Home() {
                   <p>2023 - Surviving</p>
                 </ExperienceItem>
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Contributions Section */}
-            <div className="mb-16 w-full text-left">
+            <ScrollReveal className="mb-16 w-full text-left">
               <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
                 GitHub Contributions
               </h2>
               <GithubGraph />
-            </div>
+            </ScrollReveal>
 
             {/* Research Publications Section */}
-            <div className="mb-16 w-full text-left">
+            <ScrollReveal className="mb-16 w-full text-left">
               <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
                 Research Publications
               </h2>
@@ -680,10 +685,10 @@ export default function Home() {
                   </div>
                 </ExperienceItem>
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Tech Stack Section */}
-            <div className="mb-16 w-full text-left">
+            <ScrollReveal className="mb-16 w-full text-left">
               <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
                 Tech Stack
               </h2>
@@ -691,10 +696,10 @@ export default function Home() {
                 I&apos;m a generalist at heart who can build with anything, but here&apos;s the core stack I&apos;ve spent the most time with:
               </p>
               <TechStack />
-            </div>
+            </ScrollReveal>
 
             {/* Resume Section */}
-            <div className="mb-16 w-full text-left">
+            <ScrollReveal className="mb-16 w-full text-left">
               <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
                 Resume
               </h2>
@@ -712,10 +717,10 @@ export default function Home() {
                   <ArrowRight className="w-3 h-3" />
                 </a>
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Videos Section */}
-            <div className="mb-16 w-full text-left">
+            <ScrollReveal className="mb-16 w-full text-left">
               <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
                 Explainer Videos
               </h2>
@@ -731,10 +736,10 @@ export default function Home() {
                   className="h-full w-full grayscale transition duration-500 ease-out group-hover:grayscale-0 group-hover:saturate-125"
                 />
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Writings & Blogs Section */}
-            <div className="mb-16 w-full text-left">
+            <ScrollReveal className="mb-16 w-full text-left">
               <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
                 Writings & Blogs
               </h2>
@@ -750,10 +755,10 @@ export default function Home() {
                 </a>{" "}
                 rather than building a custom site. Instead of overengineering, I sidestep reinventing the wheel to channel my energy into blending sharp takes on AI systems, product strategy, and technical architecture with bold dives into filmmaking craft, music composition, and production.
               </p>
-            </div>
+            </ScrollReveal>
 
             {/* Library Section */}
-            <div className="mb-16 w-full text-left">
+            <ScrollReveal className="mb-16 w-full text-left">
               <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
                 Library
               </h2>
@@ -788,10 +793,10 @@ export default function Home() {
               <p className="mt-6 text-xs italic text-gray-400 dark:text-gray-500">
                 *and many more, these are just one of my best reads
               </p>
-            </div>
+            </ScrollReveal>
 
             {/* Thing about me Section */}
-            <div className="mb-16 w-full text-left">
+            <ScrollReveal className="mb-16 w-full text-left">
               <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
                 Thing about me
               </h2>
@@ -804,10 +809,10 @@ export default function Home() {
                   I believe that the best products are built by people who have a diverse range of interests. It&apos;s the unique combination of technical depth and human perspective that allows us to create technology that actually resonates.
                 </p>
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Get in Touch Section */}
-            <div className="mb-16 w-full text-left">
+            <ScrollReveal className="mb-16 w-full text-left">
               <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-gray-400">
                 Get in Touch
               </h2>
@@ -831,7 +836,7 @@ export default function Home() {
                   </a>
                 </p>
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Pomodoro Timer Section */}
             <PomodoroTimer />
