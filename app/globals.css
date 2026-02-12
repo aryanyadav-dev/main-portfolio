@@ -5,6 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #000000;
+  scroll-behavior: smooth;
 }
 
 .dark {

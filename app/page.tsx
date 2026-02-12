@@ -99,13 +99,17 @@ export default function Home() {
     setIsLofiPlaying(!isLofiPlaying);
   };
 
-  const starPositions = useMemo(() => {
-    return [...Array(50)].map(() => ({
-      top: `${Math.random() * 100}%`,
-      left: `${Math.random() * 100}%`,
-      duration: 2 + Math.random() * 3,
-      delay: Math.random() * 5,
-    }));
+  const [starPositions, setStarPositions] = useState<{ top: string; left: string; duration: number; delay: number }[]>([]);
+
+  useEffect(() => {
+    setStarPositions(
+      [...Array(50)].map(() => ({
+        top: `${Math.random() * 100}%`,
+        left: `${Math.random() * 100}%`,
+        duration: 2 + Math.random() * 3,
+        delay: Math.random() * 5,
+      }))
+    );
   }, []);
 
   const projects: Project[] = [
