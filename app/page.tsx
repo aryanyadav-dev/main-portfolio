@@ -100,6 +100,7 @@ export default function Home() {
   };
 
   const [starPositions, setStarPositions] = useState<{ top: string; left: string; duration: number; delay: number }[]>([]);
+  const [showAllPublications, setShowAllPublications] = useState(false);
 
   useEffect(() => {
     setStarPositions(
@@ -261,6 +262,23 @@ export default function Home() {
           linkedin: "https://www.linkedin.com/in/chinmay-sawant-8b3282266/"
         }
       ]
+    }
+  ];
+
+  const publications = [
+    {
+      title: "Unified Computational Framework for Multi-Modal Human Motion Capture and Processing",
+      conference: "MulticonW 2026",
+      authors: "Aryan Yadav; Chinmay Sawant; Abhinav Singh",
+      abstract: "The rapid growth of motion-driven systems in entertainment, biomechanics, robotics, and HCI demands scalable, unified human motion intelligence beyond lab settings. We propose an end-to-end architecture integrating multimodal motion capture (IMUs, vision, hybrids), neural representation learning, real-time style transfer, and cross-platform deployment. It separates motion structure from style for controlled generation, skeletal transfers, and real-time adjustments—ensuring temporal consistency, high resolution, and biomechanical realism. The framework emphasizes responsible AI via curated, consented datasets and transparent training aligned with governance standards.",
+      link: ""
+    },
+    {
+      title: "Real Time Aerospace Simulation in Spatial Computing",
+      conference: "",
+      authors: "Aryan Yadav; Chinmay Sawant; Om Awadhoot",
+      abstract: "This paper presents an AI-enhanced, multi-user augmented reality (AR) training system for aerospace applications. The system integrates ORB-SLAM2 for real-time localization, Unity 3D and AR Foundation for simulation, and Gemini AI for intelligent troubleshooting. Monocular RGB-based tracking enables shared virtual object placement, ensuring spatial consistency across users, while a central server synchronizes avatars and interactions in real time. Deep learning-based depth estimation improves occlusion handling, and physics simulations enhance realism. With GPU acceleration and Firebase-based cloud networking, the system delivers immersive, efficient, and collaborative avionics training. The proposed framework demonstrates a scalable approach to next-generation aerospace training environments.",
+      link: ""
     }
   ];
 
@@ -657,61 +675,70 @@ export default function Home() {
 
             {/* Research Publications Section */}
             <ScrollReveal className="mb-16 w-full text-left">
-              <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
-                Research Publications
-              </h2>
-              <div className="space-y-12">
-                <ExperienceItem
-                  title="Unified Computational Framework for Multi-Modal Human Motion Capture and Processing"
-                  role=""
-                  collapsible={true}
-                  collapsedHeight="max-h-40"
-                >
-                  <div className="space-y-4">
-                    <div className="space-y-1">
-                      <p className="text-sm text-gray-400 dark:text-gray-500 font-medium">
-                        MulticonW 2026
-                      </p>
-                      <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
-                        <p className="text-gray-600 dark:text-gray-400">Authors: Aryan Yadav; Chinmay Sawant; Abhinav Singh</p>
-                        <a
-                          href=""
-                          className="inline-flex items-center text-xs font-medium text-black dark:text-white underline underline-offset-4 hover:text-gray-600 dark:hover:text-gray-300"
-                        >
-                          View Publication
-                        </a>
-                      </div>
-                    </div>
-                    <div className="space-y-2">
-                      <p className="text-xs uppercase tracking-wider text-gray-400 dark:text-gray-500 font-bold">Abstract</p>
-                      <p className="text-gray-600 dark:text-gray-400">The rapid growth of motion-driven systems in entertainment, biomechanics, robotics, and HCI demands scalable, unified human motion intelligence beyond lab settings. We propose an end-to-end architecture integrating multimodal motion capture (IMUs, vision, hybrids), neural representation learning, real-time style transfer, and cross-platform deployment. It separates motion structure from style for controlled generation, skeletal transfers, and real-time adjustments—ensuring temporal consistency, high resolution, and biomechanical realism. The framework emphasizes responsible AI via curated, consented datasets and transparent training aligned with governance standards.</p>
-                    </div>
-                  </div>
-                </ExperienceItem>
-                <ExperienceItem
-                  title="Real Time Aerospace Simulation in Spatial Computing"
-                  role=""
-                  collapsible={true}
-                  collapsedHeight="max-h-40"
-                >
-                  <div className="space-y-4">
-                    <div className="space-y-1">
-                      <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
-                        <p className="text-gray-600 dark:text-gray-400">Authors: Aryan Yadav; Chinmay Sawant; Om Awadhoot</p>
-                        <a
-                          href=""
-                          className="inline-flex items-center text-xs font-medium text-black dark:text-white underline underline-offset-4 hover:text-gray-600 dark:hover:text-gray-300"
-                        >
-                          View Publication
-                        </a>
-                      </div>
-                    </div>
-                    <div className="space-y-2">
-                      <p className="text-xs uppercase tracking-wider text-gray-400 dark:text-gray-500 font-bold">Abstract</p>
-                      <p className="text-gray-600 dark:text-gray-400">This paper presents an AI-enhanced, multi-user augmented reality (AR) training system for aerospace applications. The system integrates ORB-SLAM2 for real-time localization, Unity 3D and AR Foundation for simulation, and Gemini AI for intelligent troubleshooting. Monocular RGB-based tracking enables shared virtual object placement, ensuring spatial consistency across users, while a central server synchronizes avatars and interactions in real time. Deep learning-based depth estimation improves occlusion handling, and physics simulations enhance realism. With GPU acceleration and Firebase-based cloud networking, the system delivers immersive, efficient, and collaborative avionics training. The proposed framework demonstrates a scalable approach to next-generation aerospace training environments.</p>
-                    </div>
-                  </div>
-                </ExperienceItem>
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
+                  Research Publications
+                </h2>
+                {publications.length > 2 && (
+                  <button
+                    onClick={() => setShowAllPublications(!showAllPublications)}
+                    className="text-xs font-medium text-gray-400 hover:text-black dark:text-gray-500 dark:hover:text-white transition-colors flex items-center gap-1"
+                  >
+                    {showAllPublications ? (
+                      <>
+                        Show Less <ArrowUpRight className="h-3 w-3 rotate-45" />
+                      </>
+                    ) : (
+                      <>
+                        View All ({publications.length}) <ArrowRight className="h-3 w-3" />
+                      </>
+                    )}
+                  </button>
+                )}
+              </div>
+
+              <div className="space-y-8">
+                <AnimatePresence mode="popLayout">
+                  {publications.slice(0, showAllPublications ? undefined : 2).map((pub, index) => (
+                    <motion.div
+                      key={pub.title}
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <ExperienceItem
+                        title={pub.title}
+                        role=""
+                        collapsible={true}
+                        collapsedHeight="max-h-40"
+                      >
+                        <div className="space-y-4">
+                          <div className="space-y-1">
+                            <p className="text-sm text-gray-400 dark:text-gray-500 font-medium h-5">
+                              {pub.conference}
+                            </p>
+                            <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
+                              <p className="text-gray-600 dark:text-gray-400">Authors: {pub.authors}</p>
+                              {pub.link && (
+                                <a
+                                  href={pub.link}
+                                  className="inline-flex items-center text-xs font-medium text-black dark:text-white underline underline-offset-4 hover:text-gray-600 dark:hover:text-gray-300"
+                                >
+                                  View Publication
+                                </a>
+                              )}
+                            </div>
+                          </div>
+                          <div className="space-y-2">
+                            <p className="text-xs uppercase tracking-wider text-gray-400 dark:text-gray-500 font-bold">Abstract</p>
+                            <p className="text-gray-600 dark:text-gray-400">{pub.abstract}</p>
+                          </div>
+                        </div>
+                      </ExperienceItem>
+                    </motion.div>
+                  ))}
+                </AnimatePresence>
               </div>
             </ScrollReveal>
 
