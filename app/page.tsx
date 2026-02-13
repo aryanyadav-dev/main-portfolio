@@ -715,9 +715,11 @@ export default function Home() {
                       >
                         <div className="space-y-4">
                           <div className="space-y-1">
-                            <p className="text-sm text-gray-400 dark:text-gray-500 font-medium h-5">
-                              {pub.conference}
-                            </p>
+                            {pub.conference && (
+                              <p className="text-sm text-gray-400 dark:text-gray-500 font-medium h-5">
+                                {pub.conference}
+                              </p>
+                            )}
                             <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
                               <p className="text-gray-600 dark:text-gray-400">Authors: {pub.authors}</p>
                               {pub.link && (
