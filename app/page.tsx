@@ -688,6 +688,30 @@ export default function Home() {
                     </div>
                   </div>
                 </ExperienceItem>
+                <ExperienceItem
+                  title="Real Time Aerospace Simulation in Spatial Computing"
+                  role=""
+                  collapsible={true}
+                  collapsedHeight="max-h-40"
+                >
+                  <div className="space-y-4">
+                    <div className="space-y-1">
+                      <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
+                        <p className="text-gray-600 dark:text-gray-400">Authors: Aryan Yadav; Chinmay Sawant; Om Awadhoot</p>
+                        <a
+                          href=""
+                          className="inline-flex items-center text-xs font-medium text-black dark:text-white underline underline-offset-4 hover:text-gray-600 dark:hover:text-gray-300"
+                        >
+                          View Publication
+                        </a>
+                      </div>
+                    </div>
+                    <div className="space-y-2">
+                      <p className="text-xs uppercase tracking-wider text-gray-400 dark:text-gray-500 font-bold">Abstract</p>
+                      <p className="text-gray-600 dark:text-gray-400">This paper presents an AI-enhanced, multi-user augmented reality (AR) training system for aerospace applications. The system integrates ORB-SLAM2 for real-time localization, Unity 3D and AR Foundation for simulation, and Gemini AI for intelligent troubleshooting. Monocular RGB-based tracking enables shared virtual object placement, ensuring spatial consistency across users, while a central server synchronizes avatars and interactions in real time. Deep learning-based depth estimation improves occlusion handling, and physics simulations enhance realism. With GPU acceleration and Firebase-based cloud networking, the system delivers immersive, efficient, and collaborative avionics training. The proposed framework demonstrates a scalable approach to next-generation aerospace training environments.</p>
+                    </div>
+                  </div>
+                </ExperienceItem>
               </div>
             </ScrollReveal>
 

@@ -19,8 +19,8 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://aryanyadav-dev.vercel.app'),
   title: {
-    default: "Aryan Yadav | Full Stack Developer & Product Builder",
-    template: "%s | Aryan Yadav"
+    default: "Aryan Yadav Portfolio",
+    template: "%s | Aryan Yadav Portfolio"
   },
   description: "Portfolio of Aryan Yadav - Full Stack Developer, Product Builder, and Polymath. Specializing in AI, React, Next.js, and building impactful products.",
   keywords: ["Aryan Yadav", "Full Stack Developer", "Product Builder", "AI Engineer", "React", "Next.js", "Portfolio", "Web Development"],
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://aryanyadav-dev.vercel.app",
-    title: "Aryan Yadav | Full Stack Developer & Product Builder",
+    title: "Aryan Yadav Portfolio",
     description: "Portfolio of Aryan Yadav - Full Stack Developer, Product Builder, and Polymath. Bridging technical architecture with business outcomes.",
     siteName: "Aryan Yadav Portfolio",
     images: [
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aryan Yadav | Full Stack Developer & Product Builder",
+    title: "Aryan Yadav Portfolio",
     description: "Portfolio of Aryan Yadav - Full Stack Developer, Product Builder, and Polymath.",
     images: ["/me.png"],
   },
