@@ -350,7 +350,7 @@ export default function Home() {
               <div className="relative h-full w-full overflow-hidden [mask-image:linear-gradient(to_bottom,black_90%,transparent)]">
                 <Image
                   src="/me.png"
-                  alt="Profile"
+                  alt="Aryan Yadav Profile"
                   fill
                   unoptimized
                   className={`object-cover transition-transform duration-700 ${showEasterEgg ? 'scale-105' : ''}`}
@@ -662,7 +662,7 @@ export default function Home() {
               </h2>
               <div className="space-y-12">
                 <ExperienceItem
-                  title="Decoupled Neural Representations for Expressive Human Motion"
+                  title="Unified Computational Framework for Multi-Modal Human Motion Capture and Processing"
                   role=""
                   collapsible={true}
                   collapsedHeight="max-h-40"
@@ -712,7 +712,7 @@ export default function Home() {
                   Check out my detailed resume to see my full work history, skills, and accomplishments.
                 </p>
                 <a
-                  href="https://drive.google.com/file/d/1f6TS98bvT_eIGNXipWzXyNI_vtRl38j5/view"
+                  href="https://drive.google.com/file/d/19EY3hf6_gP_oCNI26Wy1m2sJfOWIMe-_/view"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 w-fit px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-black text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-900 transition-colors font-medium text-xs uppercase tracking-wider"
