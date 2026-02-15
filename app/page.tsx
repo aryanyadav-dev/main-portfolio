@@ -660,7 +660,7 @@ export default function Home() {
                   title="Thakur College of Engineering and Technology"
                   role="Computer Engineering"
                 >
-                  <p>2023 - Surviving</p>
+                  <p>2023 - 2027</p>
                 </ExperienceItem>
               </div>
             </ScrollReveal>
