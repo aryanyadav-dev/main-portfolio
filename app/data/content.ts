@@ -132,10 +132,10 @@ I host my thoughts on [Medium](https://medium.com/@aryanyadavblogs) rather than 
 
 ### Casual Reads
 - **Hooked: How to Build Habit-Forming Products** by Nir Eyal
-- **The Lean Startup** by Eric Ries
+- **The Man who saw Seconds** by Alexander Boldizar
 - **Zero to One** by Peter Thiel
 - **The Almanack of Naval Ravikant** by Eric Jorgenson
-- **Deep Work** by Cal Newport
+- **Project Hail Mary** by Andy Weir
 - **Limitless** by Jim Kwik
 
 *and many more, these are just one of my best reads
