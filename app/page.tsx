@@ -826,10 +826,10 @@ export default function Home() {
                 <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                   {[
                     { title: "Hooked: How to Build Habit-Forming Products", author: "Nir Eyal" },
-                    { title: "The Lean Startup", author: "Eric Ries" },
+                    { title: "The Man who saw Seconds", author: "Alexander Boldizar" },
                     { title: "Zero to One", author: "Peter Thiel" },
                     { title: "The Almanack of Naval Ravikant", author: "Eric Jorgenson" },
-                    { title: "Deep Work", author: "Cal Newport" },
+                    { title: "Project Hail Mary", author: "Andy Weir" },
                     { title: "Limitless", author: "Jim Kwik" }
                   ].map((book) => (
                     <div key={book.title} className="group flex flex-col gap-1 transition-all">
