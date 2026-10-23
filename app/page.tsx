@@ -779,18 +779,31 @@ export default function Home() {
               <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
                 Explainer Videos
               </h2>
-              <p className="mb-8 text-lg text-gray-600 dark:text-gray-400">
-                I kinda built a Claude Code for Jira and Confluence here&apos;s a video about it...
-              </p>
-              <div className="group aspect-video w-full overflow-hidden rounded-xl border border-gray-100 dark:border-gray-900 bg-gray-50 dark:bg-gray-950 shadow-sm transition-all hover:shadow-md duration-500">
-                <iframe
-                  src="https://www.youtube.com/embed/xhio4FN8gds"
-                  title="Claude Code for Jira and Confluence"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="h-full w-full grayscale transition duration-500 ease-out group-hover:grayscale-0 group-hover:saturate-125"
-                />
-              </div>
+              <a
+                href="https://youtu.be/xhio4FN8gds"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex w-full flex-col overflow-hidden rounded-[22px] border border-gray-200 bg-white transition-all duration-500 hover:shadow-sm dark:border-zinc-800 dark:bg-black sm:flex-row"
+              >
+                <div className="relative aspect-video w-full shrink-0 overflow-hidden bg-gray-100 dark:bg-zinc-900 sm:w-[38.2%]">
+                  <Image
+                    src="https://img.youtube.com/vi/xhio4FN8gds/maxresdefault.jpg"
+                    alt="Claude Code for Jira and Confluence video thumbnail"
+                    fill
+                    sizes="(max-width: 640px) 100vw, 42vw"
+                    className="object-cover grayscale transition duration-500 ease-out group-hover:grayscale-0 group-hover:saturate-125"
+                  />
+                </div>
+                <div className="flex flex-1 flex-col justify-center gap-4 p-6 sm:gap-5 sm:px-8 sm:py-6">
+                  <h3 className="max-w-xl text-lg font-bold leading-[1.3] tracking-tight text-black dark:text-white sm:text-xl">
+                    Claude Code for Jira and Confluence
+                  </h3>
+                  <span className="inline-flex items-center gap-2 text-sm text-gray-500 transition-colors group-hover:text-black dark:text-gray-400 dark:group-hover:text-white sm:text-base">
+                    Watch on YouTube
+                    <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                  </span>
+                </div>
+              </a>
             </ScrollReveal>
 
             {/* Writings & Blogs Section */}
