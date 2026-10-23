@@ -16,7 +16,7 @@ Open to product and AI roles with ownership.
 
 Looking for teams where I can shape roadmap, ship fast, and own outcomes from discovery to launch.
 
-Roles: Product Manager, Associate PM, AI Engineer, AI Product Engineer, Founding PM
+Roles: Associate Product Manager, Business Analyst, Associate Consultant, Product Manager
 
 ## Projects
 

@@ -467,7 +467,7 @@ export default function Home() {
                   </div>
 
                   <div className="flex flex-wrap gap-1.5">
-                    {["Product Manager", "Associate PM", "AI Engineer", "AI Product Engineer", "Founding PM"].map((role) => (
+                    {["Associate Product Manager", "Business Analyst", "Associate Consultant", "Product Manager"].map((role) => (
                       <div
                         key={role}
                         className="inline-flex w-fit rounded-lg border border-gray-200 bg-white px-2.5 py-2 dark:border-zinc-800 dark:bg-zinc-950"
