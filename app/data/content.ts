@@ -1,5 +1,5 @@
 export const getMarkdownContent = (time: string) => `# Aryan Yadav
-engineer - musician • ${time || "00:00:00"} IST
+engineer - screenwriter • ${time || "00:00:00"} IST
 
 ## About
 
@@ -126,12 +126,12 @@ Featured Video: [https://youtu.be/xhio4FN8gds](https://youtu.be/xhio4FN8gds)
 
 ## Writings & Blogs
 
-I host my thoughts on [Medium](https://medium.com/@aryanyadavblogs) rather than building a custom site. Instead of overengineering, I sidestep reinventing the wheel to channel my energy into blending sharp takes on AI systems, product strategy, and technical architecture with bold dives into filmmaking craft, music composition, and production.
+I host my thoughts on [Medium](https://medium.com/@aryanyadavblogs) rather than building a custom site. Instead of overengineering, I sidestep reinventing the wheel to channel my energy into blending sharp takes on AI systems, product strategy, and technical architecture with bold dives into filmmaking craft, screenwriting, and production.
 
 ## Library
 
 ### Casual Reads
-- **Hooked: How to Build Habit-Forming Products** by Nir Eyal
+- **Cosmos** by Carl Sagan
 - **The Man who saw Seconds** by Alexander Boldizar
 - **Zero to One** by Peter Thiel
 - **The Almanack of Naval Ravikant** by Eric Jorgenson
@@ -140,9 +140,11 @@ I host my thoughts on [Medium](https://medium.com/@aryanyadavblogs) rather than 
 
 *and many more, these are just one of my best reads
 
-## Thing About Me
+## Things About Me
 
 Driven by curiosity, I chase a deep understanding of how things truly work at their core, whether diving into the intricacies of complex architectures or stepping out into the real world. Beyond engineering and build systems, I find that balance in the tactile and thoughtful.
+
+I also enjoy writing screenplays for web series and films—building characters, shaping stories, and turning ideas into scenes that feel visual, human, and memorable. Screenwriting gives me a creative space to explore different perspectives and create worlds beyond code.
 
 The best products emerge from creators with diverse interests. It's this potent mix of technical depth and human insight that crafts technology which truly connects and resonates.
 

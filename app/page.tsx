@@ -387,7 +387,7 @@ export default function Home() {
 
             {/* Phonetic Pronunciation (Aesthetic touch often found in minimal portfolios) */}
             <div className="mb-8 flex flex-wrap items-center justify-center gap-2 text-xs text-gray-400 dark:text-gray-500 sm:text-sm">
-              <span>engineer - musician</span>
+              <span>engineer - screenwriter</span>
               <span className="text-gray-300 dark:text-gray-700">•</span>
               <span>noun</span>
               <span className="text-gray-300 dark:text-gray-700">•</span>
@@ -825,7 +825,7 @@ export default function Home() {
                 </h3>
                 <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                   {[
-                    { title: "Hooked: How to Build Habit-Forming Products", author: "Nir Eyal" },
+                    { title: "Cosmos", author: "Carl Sagan" },
                     { title: "The Man who saw Seconds", author: "Alexander Boldizar" },
                     { title: "Zero to One", author: "Peter Thiel" },
                     { title: "The Almanack of Naval Ravikant", author: "Eric Jorgenson" },
@@ -850,14 +850,18 @@ export default function Home() {
               </p>
             </ScrollReveal>
 
-            {/* Thing about me Section */}
+            {/* Things About Me Section */}
             <ScrollReveal className="mb-16 w-full text-left">
               <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
-                Thing about me
+                Things About Me
               </h2>
               <div className="space-y-6">
                 <p className="w-full text-lg leading-relaxed text-gray-600 dark:text-gray-400">
                   Beyond engineering and build systems, I find balance in the tactile and the thoughtful. Whether it&apos;s exploring the nuances of complex architectures or spending time in the real world, my approach to life is driven by curiosity and a desire to understand how things work at their core.
+                </p>
+
+                <p className="w-full text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                  I also enjoy writing screenplays for web series and films—building characters, shaping stories, and turning ideas into scenes that feel visual, human, and memorable. Screenwriting gives me a creative space to explore different perspectives and create worlds beyond code.
                 </p>
 
                 <p className="w-full text-lg leading-relaxed text-gray-600 dark:text-gray-400">
